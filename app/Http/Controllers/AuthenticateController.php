@@ -21,13 +21,13 @@ class AuthenticateController extends Controller
                    return JsonResponse::create(array('message' => "Usuario ".$data['usuario']." no existe", "respuesta" =>false), 200);
                }
         } catch (Exception $exc) {
-            return JsonResponse::create(array('message' => "No pudimos autenticarte, intentelo de nuevo", "exception" => $exc->getMessage(), "respuesta" => false), 401);
+            return JsonResponse::create(array('message' => "No pudimos autenticarte, intentalo de nuevo", "exception" => $exc->getMessage(), "respuesta" => false), 401);
         }
     }
    
 
 
-    public function logout(Request $request){
+    public function logout($id){
      try {
        $user = User::find($id);
        $user->remember_token = "";
