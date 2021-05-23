@@ -1,2 +1,2 @@
 <?php
-Route::resource("cliente","clienteController");
+Route::resource("clientes","clienteController");

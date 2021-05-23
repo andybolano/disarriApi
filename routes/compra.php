@@ -1,2 +1,3 @@
 <?php
-Route::get('compra/metodos',"compraController@pay");
+Route::post('pay',"compraController@pay");
+
